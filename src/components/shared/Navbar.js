@@ -36,7 +36,7 @@ const  Navbar = () => {
 
   return (
     <>
-        <AppBar position="static" className="bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
+        <AppBar position="sticky" className="bg-green-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Image src={logo} width={100} height={100} alt="Logo" />
