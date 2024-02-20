@@ -48,7 +48,6 @@ const Login = () => {
                             {/*----------- Email Input ------------*/}
                             <div className="pb-4 w-full">
                                 <TextField
-                                    className="w-full"
                                     id="outlined-email-input"
                                     label="Email"
                                     type="email"
@@ -57,6 +56,23 @@ const Login = () => {
                                     value={formData.user.email}
                                     onChange={handleChange}
                                     required
+                                    sx={{
+                                        mb: "1rem",
+                                        width:"100%",
+                                        bgcolor: 'transparent',
+                                        "& .MuiInputBase-root": {
+                                          color: "white",
+                                          "& > fieldset": {
+                                            borderColor: "rgb(171, 171, 171)",
+                                          },
+                                          "&:hover fieldset": {
+                                            borderColor: "white",
+                                          },
+                                          "&.Mui-focused fieldset": {
+                                            borderColor: "white",
+                                          },
+                                        },
+                                      }}
                                 />
                             </div>
                             {/*----------- Input Password------------*/}
@@ -70,13 +86,30 @@ const Login = () => {
                                     value={formData.user.password}
                                     onChange={handleChange}
                                     required
+                                    sx={{
+                                        mb: "1rem",
+                                        widht:"100%",
+                                        bgcolor: 'transparent',
+                                        "& .MuiInputBase-root": {
+                                          color: "white",
+                                          "& > fieldset": {
+                                            borderColor: "rgb(171, 171, 171)",
+                                          },
+                                          "&:hover fieldset": {
+                                            borderColor: "white",
+                                          },
+                                          "&.Mui-focused fieldset": {
+                                            borderColor: "white",
+                                          },
+                                        },
+                                      }}
                                 />
                             </div>
-                            <button
-                                type="submit"
-                                className="w-full max-w-md text-center py-3 rounded btn focus:outline-none my-4 bg-green-500 text-white hover:bg-white hover:text-green-500 hover:border-green-500">
-                                Login
-                            </button>
+                              <button
+                                    type="submit"
+                                    className="w-full max-w-md text-center py-3 rounded btn focus:outline-none my-4 bg-green-500 text-white hover:bg-white hover:text-green-500 hover:border-green-500">
+                                    Login
+                              </button>
                         </form>
                         <p className="text-xs">
                             Do not Have An Account?
