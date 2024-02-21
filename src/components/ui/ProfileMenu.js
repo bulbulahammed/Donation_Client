@@ -19,7 +19,7 @@ const ProfileMenu = () => {
     return (
         <div>
             <Button onClick={handleOpen}>
-                <AccountCircleIcon/>
+                <AccountCircleIcon className="text-green-500"/>
             </Button>
             <Modal
                 open={open}

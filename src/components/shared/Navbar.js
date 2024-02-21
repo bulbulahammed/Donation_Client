@@ -39,7 +39,9 @@ const  Navbar = () => {
         <AppBar position="sticky" className="bg-green-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Image src={logo} width={100} height={100} alt="Logo" />
+                    <Link href="/">
+                        <Image src={logo} width={100} height={100} alt="Logo" />
+                    </Link>
                 <Box className="w-full text-right">
                     {navItems.map((item) => (
                         <Link key={item} href={item.pathname}>

@@ -1,10 +1,9 @@
+import Banner from "@/components/ui/Banner";
 
 export default function Home() {
   return (
-      <>
-        <div>
-          <h1>Welcome to Donation Site</h1>
-        </div>
-      </>
+      <div className="bg-gradient-to-b from-green-500 to-transparent min-h-screen">
+        <Banner/>
+      </div>
   );
 }
