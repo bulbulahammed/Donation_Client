@@ -9,28 +9,6 @@ import Image from 'next/image';
 import Link from "next/link";
 import ProfileMenu from "../ui/ProfileMenu";
 
-const navItems = [
-    {
-        route: "Home",
-        pathname: "/",
-    },
-    {
-        route: "Program",
-        pathname: "/program",
-    },
-    {
-        route: "Stories",
-        pathname: "/stories",
-    },
-    {
-        route: "Blog",
-        pathname: "/blog",
-    },
-    {
-        route: "About",
-        pathname: "/about",
-    },
-]
 
 const  Navbar = () => {
 
@@ -43,11 +21,21 @@ const  Navbar = () => {
                         <Image src={logo} width={100} height={100} alt="Logo" />
                     </Link>
                 <Box className="w-full text-right">
-                    {navItems.map((item) => (
-                        <Link key={item} href={item.pathname}>
-                            <Button className="text-black">{item.route}</Button>
-                        </Link>
-                    ))}
+                    <Link href="/">
+                        <Button className="text-black">Home</Button>
+                    </Link>
+                    <Link href="/program">
+                        <Button className="text-black">Program</Button>
+                    </Link>
+                    <Link href="/stories">
+                        <Button className="text-black">Stories</Button>
+                    </Link>
+                    <Link href="/blog">
+                        <Button className="text-black">Blog</Button>
+                    </Link>
+                    <Link href="/about">
+                        <Button className="text-black">About</Button>
+                    </Link>
                 </Box>
                 <ProfileMenu/>
                 </Toolbar>

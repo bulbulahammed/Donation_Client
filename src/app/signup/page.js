@@ -39,7 +39,7 @@ const SignUp = () => {
                     <div className="p-10">
                         {/* Heading */}
                         <div className="pb-10 text-center">
-                            <h2 className="text-2xl py-5">Login</h2>
+                            <h2 className="text-2xl py-5">Sign Up</h2>
                             <div className="flex justify-center items-center">
                             <Avatar className="bg-green-500 flex justify-center">
                                 <LockOutlinedIcon />

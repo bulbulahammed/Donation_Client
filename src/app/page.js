@@ -1,4 +1,5 @@
 import Banner from "@/components/ui/Banner";
+import FooterSection from "@/components/ui/FooterSection";
 import NewsLetter from "@/components/ui/NewsLetter";
 import Program from "@/components/ui/Program";
 import Testimonial from "@/components/ui/Testimonial";
@@ -12,6 +13,7 @@ export default function Home() {
         <Video/>
         <NewsLetter/>
         <Testimonial/>
+        <FooterSection/>
       </div>
   );
 }
