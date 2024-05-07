@@ -34,7 +34,7 @@ const Navbar = () => {
                         <Box className="w-full text-right">
                             {
                                 menuItems.map((link)=>{
-                                    const isActive = pathname.startsWith(link.href);
+                                    const isActive = pathname === link.href || (pathname === "/" && link.href === "/");
                                     return (
                                         <Link href={link.href} key={link.name} >
                                               <Button className={isActive ? "text-green-500" : "text-red-600"} >{link.name}</Button>
