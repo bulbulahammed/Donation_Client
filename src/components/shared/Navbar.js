@@ -1,58 +1,3 @@
-// 'use client'
-// import logo from "@/assets/Logo.png";
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Button from '@mui/material/Button';
-// import Container from '@mui/material/Container';
-// import Toolbar from '@mui/material/Toolbar';
-// import Image from 'next/image';
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-// import ProfileMenu from "../ui/ProfileMenu";
-
-
-// const menuItems = [
-//     {name: "Home", href:"/"},
-//     {name: "Program", href:"/program"},
-//     {name: "Stories", href:"/stories"},
-//     {name: "Blog", href:"/blog"},
-//     {name: "About", href:"/about"},
-// ]
-
-// const Navbar = () => {
-//     const pathname = usePathname();
-//     return (
-//         <>
-//             <AppBar position="sticky" className="bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
-//                 <Container maxWidth="xl">
-//                     <Toolbar disableGutters>
-//                         <Link href="/">
-//                             <Image src={logo} width={100} height={100} alt="Logo" />
-//                         </Link>
-//                         <Box className="w-full text-right">
-//                             {
-//                                 menuItems.map((link)=>{
-//                                     const isActive = pathname === link.href || (pathname === "/" && link.href === "/");
-//                                     return (
-//                                         <Link href={link.href} key={link.name}>
-//                                               <Button className={isActive ? "text-black" : "text-black font-bold"} >{link.name}</Button>
-//                                         </Link>
-//                                     );
-//                                 })
-//                             }
-//                         </Box>
-//                         <ProfileMenu />
-//                     </Toolbar>
-//                 </Container>
-//             </AppBar>
-//         </>
-//     );
-// }
-
-// export default Navbar;
-
-
-
  'use client'
 import logo from "@/assets/Logo.png";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -142,7 +87,8 @@ const Navbar = () => {
               </Box>
             </Menu>
           </Box>
-          <Box className="w-full text-right hidden md:block">
+        <Box className="w-full flex align-middle justify-center md:justify-end">
+           <Box className="hidden md:flex justify-end">
             {
               menuItems.map((link)=>{
                 const isActive = pathname === link.href || (pathname === "/" && link.href === "/");
@@ -153,11 +99,12 @@ const Navbar = () => {
                   );
               })
             }
-          </Box>
-          <Link href="/" className="block mx-auto md:hidden text-center">
+          </Box> 
+          <Link href="/" className="flex md:hidden">
             <Image src={logo} width={100} height={100} alt="Logo" />
           </Link>
-            <ProfileMenu />
+        </Box>
+          <ProfileMenu />
         </Toolbar>
       </Container>
     </AppBar>
